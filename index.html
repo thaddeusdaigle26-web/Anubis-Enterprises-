@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Anubis A.I. Services creates bold, ready-to-publish social media content, captions, short-video scripts, and content calendars for service businesses across the United States.">
+  <title>Anubis A.I. Services | Smart Content. Real Results.</title>
+  <style>
+    :root { --bg:#101010; --panel:#191919; --gold:#d6b46b; --gold2:#f0d79a; --cream:#f5f0e5; --muted:#c4c0b6; --line:#39342a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--cream); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1120px, 92%); margin:auto; }
+    header { border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; background:rgba(16,16,16,.94); backdrop-filter:blur(10px); }
+    .nav { min-height:76px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:850; letter-spacing:.06em; font-size:.95rem; }
+    .mark { width:42px; height:42px; border:1px solid var(--gold); color:var(--gold); display:grid; place-items:center; border-radius:50%; font-size:1.35rem; font-weight:800; }
+    nav { display:flex; gap:22px; flex-wrap:wrap; align-items:center; }
+    nav a { color:var(--muted); text-decoration:none; font-size:.92rem; }
+    nav a:hover { color:var(--gold2); }
+    .button { display:inline-flex; justify-content:center; align-items:center; padding:12px 18px; border-radius:7px; background:var(--gold); color:#17130a; font-weight:800; text-decoration:none; border:1px solid var(--gold); transition:transform .15s, background .15s; }
+    .button:hover { transform:translateY(-1px); background:var(--gold2); }
+    .button.outline { background:transparent; color:var(--gold2); }
+    .hero { padding:86px 0 76px; background:radial-gradient(ellipse at 75% 20%, rgba(214,180,107,.13), transparent 38%), linear-gradient(135deg,#101010,#171613 75%,#101010); }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:center; }
+    .eyebrow { color:var(--gold2); text-transform:uppercase; letter-spacing:.17em; font-size:.78rem; font-weight:800; }
+    h1 { font-size:clamp(2.6rem, 6vw, 5rem); line-height:1.02; letter-spacing:-.045em; margin:18px 0; max-width:760px; }
+    h1 span { color:var(--gold); }
+    .lead { font-size:1.15rem; color:var(--muted); max-width:640px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin:28px 0 22px; }
+    .small-note { color:#a9a49a; font-size:.85rem; }
+    .hero-card { border:1px solid var(--line); background:linear-gradient(150deg,#211e17,#171717); border-radius:16px; padding:28px; box-shadow:0 18px 70px #0005; }
+    .hero-card .sigil { color:var(--gold); font-size:4.4rem; line-height:1; text-align:center; margin:0 0 12px; }
+    .hero-card h2 { text-align:center; color:var(--gold2); letter-spacing:.08em; font-size:1.15rem; }
+    .hero-card p { text-align:center; color:var(--muted); }
+    .mini-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:22px; }
+    .mini-list div { border:1px solid var(--line); border-radius:8px; padding:10px; text-align:center; font-size:.88rem; color:#e9dfc7; }
+    section { padding:76px 0; }
+    .section-head { max-width:720px; margin-bottom:32px; }
+    h2 { font-size:clamp(1.9rem,4vw,3rem); line-height:1.12; margin:8px 0 14px; letter-spacing:-.025em; }
+    .section-head p, .muted { color:var(--muted); }
+    .three { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:13px; padding:24px; }
+    .card .icon { color:var(--gold); font-size:1.65rem; }
+    .card h3 { margin:10px 0 8px; font-size:1.2rem; }
+    .card p { color:var(--muted); margin:0; }
+    .services { background:#141414; }
+    .service-list { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .service-item { display:flex; gap:12px; padding:17px; border:1px solid var(--line); border-radius:10px; background:#191919; }
+    .check { color:var(--gold); font-weight:900; }
+    .pricing { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; align-items:stretch; }
+    .price-card { background:var(--panel); border:1px solid var(--line); border-radius:15px; padding:28px; display:flex; flex-direction:column; }
+    .price-card.featured { border-color:var(--gold); box-shadow:0 0 0 1px #d6b46b22; }
+    .price-tag { display:inline-block; width:max-content; padding:5px 9px; border-radius:5px; background:#3a3020; color:var(--gold2); text-transform:uppercase; letter-spacing:.08em; font-size:.72rem; font-weight:800; }
+    .price { font-size:3rem; font-weight:850; letter-spacing:-.04em; margin:12px 0 0; }
+    .price small { font-size:1rem; color:var(--muted); font-weight:500; letter-spacing:0; }
+    ul { padding-left:20px; color:var(--muted); }
+    li { margin:8px 0; }
+    .price-card .button { margin-top:auto; }
+    .sample { border-left:3px solid var(--gold); padding:8px 0 8px 18px; color:#e8e0cf; font-size:1.08rem; }
+    .sample-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .sample-label { color:var(--gold2); text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:800; }
+    .founder { background:linear-gradient(120deg,#191713,#121212); }
+    .founder-box { display:grid; grid-template-columns:.6fr 1.4fr; gap:28px; align-items:center; }
+    .founder-mark { border:1px solid var(--gold); border-radius:14px; min-height:190px; display:grid; place-items:center; color:var(--gold); font-size:4rem; background:radial-gradient(circle, #352b19, #161616 70%); }
+    .contact { background:#171510; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; }
+    .contact-panel { border:1px solid var(--line); border-radius:14px; background:#111; padding:26px; }
+    .phone { font-size:1.65rem; font-weight:850; color:var(--gold2); text-decoration:none; display:inline-block; margin:8px 0 18px; }
+    footer { border-top:1px solid var(--line); padding:24px 0; color:#aaa49a; font-size:.85rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    .disclaimer { color:#928d83; font-size:.82rem; margin-top:18px; }
+    @media(max-width:780px) {
+      .hero-grid,.founder-box,.contact-grid { grid-template-columns:1fr; }
+      .hero { padding:62px 0 52px; }
+      .three,.sample-grid { grid-template-columns:1fr; }
+      .pricing { grid-template-columns:1fr; }
+      .service-list { grid-template-columns:1fr; }
+      nav { gap:12px; }
+      nav a:not(.button) { display:none; }
+      section { padding:58px 0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Anubis A.I. Services home"><span class="mark">A</span><span>ANUBIS A.I. SERVICES</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#founder">Founder</a>
+      <a class="button" href="#contact">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Smart Content. Real Results.</div>
+        <h1>Your business deserves to <span>stand out.</span></h1>
+        <p class="lead">Bold, AI-assisted marketing content for service businesses that want to show up consistently, look professional, and spend less time staring at a blank screen.</p>
+        <div class="hero-actions">
+          <a class="button" href="#pricing">Explore Packages</a>
+          <a class="button outline" href="#contact">Request a Consultation</a>
+        </div>
+        <p class="small-note">Serving service businesses across the United States · Clear deliverables · No long-term commitment required for the introductory package</p>
+      </div>
+      <div class="hero-card">
+        <div class="sigil" aria-hidden="true">𓃥</div>
+        <h2>CONTENT WITH PURPOSE.</h2>
+        <p>Practical content built around your services, your customers, and your business goals.</p>
+        <div class="mini-list">
+          <div>Social Posts</div><div>Captions</div><div>Video Scripts</div><div>Content Calendars</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Built for local service businesses</div>
+        <h2>Less time creating content. More time running your business.</h2>
+        <p>We help service businesses stay visible with ready-to-use promotional content. You get a clear monthly package, organized deliverables, and content you can review before publishing.</p>
+      </div>
+      <div class="three">
+        <article class="card"><div class="icon">✦</div><h3>Auto Detailing</h3><p>Promote detailing packages, seasonal offers, interior refreshes, and before-and-after transformations.</p></article>
+        <article class="card"><div class="icon">✦</div><h3>Lawn Care</h3><p>Showcase curb appeal, recurring maintenance, seasonal services, and quote requests.</p></article>
+        <article class="card"><div class="icon">✦</div><h3>House Cleaning</h3><p>Highlight cleaning options, deep-cleaning services, convenient scheduling, and customer FAQs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What we deliver</div>
+        <h2>Content you can put to work.</h2>
+        <p>Our packages focus on usable marketing assets—not vague promises or guaranteed sales.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item"><span class="check">✓</span><div><strong>Social media posts</strong><div class="muted">Promotional post concepts with ready-to-use captions.</div></div></div>
+        <div class="service-item"><span class="check">✓</span><div><strong>Short-form video scripts</strong><div class="muted">Hooks and simple scripts for Reels, Shorts, and similar formats.</div></div></div>
+        <div class="service-item"><span class="check">✓</span><div><strong>Monthly content calendar</strong><div class="muted">A practical schedule to help organize publishing.</div></div></div>
+        <div class="service-item"><span class="check">✓</span><div><strong>Business-specific messaging</strong><div class="muted">Content adapted to your services, audience, and service area.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Straightforward monthly pricing</div>
+        <h2>Choose your content package.</h2>
+        <p>Clear scope. Predictable deliverables. You review and publish the content on your own accounts.</p>
+      </div>
+      <div class="pricing">
+        <article class="price-card featured">
+          <span class="price-tag">Introductory offer · First two clients</span>
+          <h3>Starter</h3>
+          <div class="price">$299 <small>/ month</small></div>
+          <p class="muted">A practical starting point for a business building a consistent social presence.</p>
+          <ul>
+            <li>12 promotional posts with captions</li>
+            <li>4 short-form video scripts</li>
+            <li>One monthly content calendar</li>
+            <li>One revision round</li>
+          </ul>
+          <a class="button" href="#contact">Ask About Starter</a>
+        </article>
+        <article class="price-card">
+          <span class="price-tag">Standard package</span>
+          <h3>Growth</h3>
+          <div class="price">$500 <small>/ month</small></div>
+          <p class="muted">More monthly content for businesses ready to keep their message active.</p>
+          <ul>
+            <li>16 promotional posts with captions</li>
+            <li>8 short-form video scripts</li>
+            <li>One monthly content calendar</li>
+            <li>One revision round</li>
+          </ul>
+          <a class="button outline" href="#contact">Ask About Growth</a>
+        </article>
+      </div>
+      <p class="disclaimer">Pricing covers the deliverables listed above. Photography, video production, account posting, paid advertising, ad spend, and community management are not included unless separately agreed in writing. Final scope and payment terms are confirmed before work begins.</p>
+    </div>
+  </section>
+
+  <section id="samples" class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Sample content</div>
+        <h2>Examples of the style we create.</h2>
+        <p>These are illustrative samples created to demonstrate our approach; they are not customer testimonials or claims of client results.</p>
+      </div>
+      <div class="sample-grid">
+        <article class="card"><div class="sample-label">Auto detailing</div><h3>Your Ride. Your Standard.</h3><div class="sample">“Your vehicle says something before you say a word. Keep it clean, polished, and ready to make an impression. Contact us to explore your detailing options.”</div></article>
+        <article class="card"><div class="sample-label">Lawn care</div><h3>Make Your Curb Appeal Count.</h3><div class="sample">“A sharp lawn changes the whole look of your property. Let’s get your outdoor space looking its best. Message us to request a lawn-care quote.”</div></article>
+        <article class="card"><div class="sample-label">House cleaning</div><h3>Walk Into a Fresher Home.</h3><div class="sample">“Your time matters. Get help tackling the dust, buildup, and everyday mess so your space feels refreshed. Reach out to ask about cleaning options.”</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder" id="founder">
+    <div class="wrap founder-box">
+      <div class="founder-mark" aria-hidden="true">𓃥</div>
+      <div>
+        <div class="eyebrow">Leadership</div>
+        <h2>Built with purpose. Focused on execution.</h2>
+        <h3>Thaddeus Daigle <span class="muted">· Founder</span></h3>
+        <p class="muted">Anubis A.I. Services helps small service businesses communicate clearly and consistently through practical, AI-assisted content. Our approach is direct: define the scope, deliver the assets, and make it easier for owners to keep their marketing moving.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow">Take the next step</div>
+        <h2>Let’s build your next month of content.</h2>
+        <p class="muted">Tell us which service you provide and what you want to promote. We’ll discuss the right package and confirm the scope before any work starts.</p>
+        <p class="muted">Serving businesses nationwide.</p>
+      </div>
+      <div class="contact-panel">
+        <h3>Contact Anubis A.I. Services</h3>
+        <p class="muted">Call or text the business number to request a consultation.</p>
+        <a class="phone" href="tel:+12253668418">225-366-8418</a>
+        <div class="hero-actions">
+          <a class="button" href="sms:+12253668418?body=Hello%20Anubis%20A.I.%20Services%2C%20I%27m%20interested%20in%20content%20services.%20My%20business%20is%3A%20">Text Us</a>
+          <a class="button outline" href="tel:+12253668418">Call Us</a>
+        </div>
+        <p class="disclaimer">Please do not send sensitive financial or personal information by text. Package scope and payment arrangements will be confirmed directly.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div><strong>Anubis A.I. Services</strong> · Smart Content. Real Results.</div>
+    <div>© <span id="year">2026</span> Anubis A.I. Services</div>
+  </div>
+  <div class="wrap disclaimer">AI-assisted content is reviewed and tailored to the agreed brief. Business outcomes vary; no specific sales, lead, or revenue results are guaranteed.</div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
